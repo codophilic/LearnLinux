@@ -95,3 +95,58 @@ In the example find all the files while executing command cat to print all the f
 
 23. grep -> Global regular expression print. it is use to search in files,logs, or combine it with pipes to filter output of another command.
 
+grep [options] pattern [files]
+
+https://www.geeksforgeeks.org/grep-command-in-unixlinux/
+
+24. du -> disk usage. Gives the size of directories. (37,38)du -h gives human readable format.
+
+25. df -> disk free provides information about file system shows disk utilization with space left and allocated etc. (39)
+
+26. history -> list all the commands ran in the past. TO run a past command we can use its ID number.
+!(number) (40)
+
+27. ps -> process status. (41,42)
+ps ax shows process initiated by any users on the system.
+
+28. top-> The top (table of processes) command shows a real-time view of running processes in Linux and displays kernel-managed tasks. The command also provides a system information summary that shows resource utilization, including CPU and memory usage.
+
+https://phoenixnap.com/kb/top-command-in-linux#:~:text=The%20top%20(table%20of%20processes,including%20CPU%20and%20memory%20usage.
+
+29. kill -> linux process receiev signals and react to them. The kill program can send a variety of signals.
+kill <PID>
+
+30. alias -> In Linux, an alias is a shortcut that references a command. An alias replaces a string that invokes a command in the Linux shell with another user-defined string. Aliases are mostly used to replace long commands, improving efficiency and avoiding potential spelling errors. (43,44)
+It is not permanent , if will kill the terminal its no longer supported.
+
+now to make it permanent we need to place it in a file depending on the shell like for bash we will add the alias in .basharc file.
+
+31. xargs -> xargs command is used to convert input from standard input into arguments to a command. Through xargs the output of a command is used as the input of another command.
+
+command1 | xargs command2
+
+Xargs is a great command that reads streams of data from standard input, then generates and executes command lines; meaning it can take output of a command and passes it as argument of another command. If no command is specified, xargs executes echo by default. You many also instruct it to read data from a file instead of stdin.
+
+let say there are multiple files in a folder and some files needs to be deleted. Those deletion of file name is present in a deletefile.txt file. So to pass the content of deletefile.txt as an argument to remove command.
+We cannot use cat deletefile.txt | rm -> since it shows one single content to remove command.
+So we need to split into arguments of deadfile and pass those arguments to the remove command. (45)
+
+Using xargs & | it converts the output of one command into arguments and pass it to another command.(46)
+
+32. ln -> It is used to create links. Its like a pointer to another file just like windows shortcuts.
+
+There are two types of hard links and soft links.
+
+Hard links -> You can't link directories and cannot link external filesystem (disk)
+let say if we want two files to be sync not copy its pointing to the same file. we can use hard links.
+
+ln original newlink (47)
+
+if we delete any one of the file the other file persists.
+https://www.geeksforgeeks.org/soft-hard-links-unixlinux/
+
+soft links-> are same as hard links but when original file is deleted the another file linked also gets deleted.
+
+33. who -> displays the users logged in the system. when a server is used by multiple people we can see which user logged in at what time.
+
+34. passwd -> One can changed the password of the linux system.
