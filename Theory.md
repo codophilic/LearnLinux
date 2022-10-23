@@ -12,9 +12,12 @@ Linux architecture (3)
 3. Shell basically Executes the command provided by application or user. 
 4. So let say if we want to. copy a file using command, shell will interpret that copy command to kernel.Then kernel understand that operation and pushes it to the hardware in language which hardware understand like an assembly language or micro controller level language. So the hardware will perform the operation and sent back the response to the kernel which in turn returns on the shell which is view on monitor. 
 
-(7) 
 
-Shell (4) 
+The kernel
+
+(7) (8)
+
+Shell (4) (9)
 
 1. Shell is the interface between user and kernel.
 2. It interprets the command and sends it to kernel. 
@@ -22,6 +25,8 @@ Shell (4)
 3. Terminal is a cli of Linux system. (5) 
 
 4. Different types of shell in Linux (6) 
+
+(10)
 
 
 https://www.javatpoint.com/linux-file-permissions
