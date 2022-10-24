@@ -4,6 +4,7 @@
 - It is reliable ,  fast and secure. We can create our own OS using based as Linux. 
 - Mobile phone, self driving cars, electronic devices are majorly based on Linux. 
 - Depending upon requirement OS selection is done like for development, majorly developers uses Linux whereas for gaming purpose windows is the better choice. 
+
 ## Windows Vs Linux
 
 ![](https://github.com/codophilic/LearnLinux/blob/main/attachments/1666499179220.jpg)
@@ -24,28 +25,32 @@
 
 ## The kernel
 
-![](https://github.com/codophilic/LearnLinux/blob/main/attachments/1666499179176.jpg)
 ![](https://github.com/codophilic/LearnLinux/blob/main/attachments/1666588186378.jpg)
+![](https://github.com/codophilic/LearnLinux/blob/main/attachments/1666499179176.jpg)
+
 
 ## Shell 
 
+![](https://github.com/codophilic/LearnLinux/blob/main/attachments/1666588186370.jpg)
 ![](https://github.com/codophilic/LearnLinux/blob/main/attachments/1666499179196.jpg)
 ![](https://github.com/codophilic/LearnLinux/blob/main/attachments/1666499179191.jpg)
-![](https://github.com/codophilic/LearnLinux/blob/main/attachments/1666588186370.jpg)
 
-1. Shell is the interface between user and kernel.
-2. It interprets the command and sends it to kernel. 
-
-3. Terminal is a cli of Linux system.
+- Shell is the interface between user and kernel.
+- It interprets the command and sends it to kernel. 
+- Terminal is a cli of Linux system.
 
 ![](https://github.com/codophilic/LearnLinux/blob/main/attachments/1666588186363.jpg)
 
-4. Different types of shell in Linux
+## Different types of shell in Linux
+
 ![](https://github.com/codophilic/LearnLinux/blob/main/attachments/1666499179183.jpg)
 
+## Users in Linux
 
+https://mediatemple.net/community/products/dv/204643890/an-introduction-to-the-root-user
+https://www.beyondtrust.com/blog/entry/unix-linux-privileged-management-should-you-sudo#:~:text=Sudo%20stands%20for%20either%20%22substitute,su%E2%80%9D%20which%20is%20not%20temporary
+
+## File permission
 
 https://www.javatpoint.com/linux-file-permissions
 https://www.section.io/engineering-education/user-groups-and-permissions-linux/
-https://mediatemple.net/community/products/dv/204643890/an-introduction-to-the-root-user
-https://www.beyondtrust.com/blog/entry/unix-linux-privileged-management-should-you-sudo#:~:text=Sudo%20stands%20for%20either%20%22substitute,su%E2%80%9D%20which%20is%20not%20temporary.
