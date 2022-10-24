@@ -25,22 +25,24 @@
 ## The kernel
 
 ![](https://github.com/codophilic/LearnLinux/blob/main/attachments/1666499179176.jpg)
-
- (8)
+![](https://github.com/codophilic/LearnLinux/blob/main/attachments/1666588186378.jpg)
 
 ## Shell 
 
 ![](https://github.com/codophilic/LearnLinux/blob/main/attachments/1666499179196.jpg)
 ![](https://github.com/codophilic/LearnLinux/blob/main/attachments/1666499179191.jpg)
+![](https://github.com/codophilic/LearnLinux/blob/main/attachments/1666588186370.jpg)
 
 1. Shell is the interface between user and kernel.
 2. It interprets the command and sends it to kernel. 
 
-3. Terminal is a cli of Linux system. (5) 
+3. Terminal is a cli of Linux system.
 
-4. Different types of shell in Linux (6) 
+![](https://github.com/codophilic/LearnLinux/blob/main/attachments/1666588186363.jpg)
 
-(10)
+4. Different types of shell in Linux
+![](https://github.com/codophilic/LearnLinux/blob/main/attachments/1666499179183.jpg)
+
 
 
 https://www.javatpoint.com/linux-file-permissions
