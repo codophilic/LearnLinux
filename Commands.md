@@ -9,6 +9,11 @@
 
 - E.g `echo -e "Geeks \bfor \bGeeks"` (it removes all the spaces in between the text)
 
+## touch
+
+- The touch command is a standard command used in UNIX/Linux operating system which is used to create, change and modify timestamps of a file. 
+- It is used to create a file without any content. The file created using touch command is empty. This command can be used when the user doesn’t have data to store at the time of file creation.
+
 ## whoami
 
 - It displays the username of the current user when this command is invoked.
@@ -26,38 +31,99 @@
 
 ## man 
 
--> display manual for that command. *(Use mouse to scroll or press space button or down arrow key.
+- display manual for that command. *(Use mouse to scroll or press space button or down arrow key.
 press '/' and search for a word hit enter to get the result. 'shift+g' end of the file, 'g' start of the file.)*
 
 ![](https://github.com/codophilic/LearnLinux/blob/main/Commands/2.PNG)
 
 ## ls 
 
-By default, ls lists just one directory. If you name one or more directories on the command line, ls will list each one. The -R (uppercase R) option lists all subdirectories, recursively. That shows you the whole directory tree starting at the current directory
-(3)(5)
+- ls is a Linux shell command that lists directory contents of files and directories.
+- By default, ls lists just one directory. If you name one or more directories on the command line, ls will list each one of those directories.
+- The -R (uppercase R) option lists all subdirectories, recursively. That shows you the whole directory tree starting at the current directory
+- **SYNTAX**: `ls [option]`
+- [ls](https://www.javatpoint.com/linux-ls)
 
-4. cd=change directory
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/3.PNG)
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/5.PNG)
 
-5. pwd =print working directory
+## cd
 
-6. mkdir=make directory (4)
+- cd command in linux known as change directory command. It is used to change current working directory. 
 
-7. rmdir=remove directory
-when we remove a directory it does not show any output, using -v it shows output. (6) 
--i does interactive mode.(7)
+- **SYNTAX**: `cd [directory]`
+
+## pwd 
+
+- `pwd` stands for Print Working Directory. It prints the path of the working directory, starting from the root.
+
+## mkdir
+
+- mkdir command in Linux allows the user to create directories (also referred to as folders in some operating systems).
+- This command can create multiple directories at once as well as set the permissions for the directories.
+- **SYNTAX**: `mkdir [options...] [directories ...]`
+
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/4.PNG)
+
+## rmdir
+
+- rmdir command is used remove empty directories from the filesystem in Linux. The rmdir command removes each and every directory specified in the command line only if these directories are empty. 
+- So if the specified directory has some directories or files in it then this cannot be removed by rmdir command.
+- **SYNTAX**: rmdir [options] [directories…]
+
+- **-v, –verbose**: This option displays verbose information for every directory being processed.
+
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/6.PNG)
+
+- **-i** does interactive mode.
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/7.PNG)
 
 
-8. touch- change file timestamp
+## open  
 
-9. open  
-open . -> opens current folder (8)
+- opens current folder or file
 
-10. mv -> move files/ folders or rename a file/ folder
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/8.PNG)
 
-11. cp -> copy
+## mv
 
-12. head/tail -> prints the starting/ending number of lines (default 10 lines ) of a file
-we can mentioned number of line require. (9,10,11)
+- Use the mv command to move files and directories from one directory to another or to rename a file or directory. 
+- This command normally works silently means no prompt for confirmation. 
+
+- **SYNTAX**: `mv [Option] source destination`
+
+## cp 
+
+- cp stands for copy. This command is used to copy files or group of files or directory. It creates an exact image of a file on a disk with different file name. cp command require at least two filenames in its arguments.
+
+- **SYNTAX**:
+
+`cp [OPTION] Source Destination
+
+cp [OPTION] Source Directory
+
+cp [OPTION] Source-1 Source-2 Source-3 Source-n Directory`
+
+- First and second syntax is used to copy Source file to Destination file or Directory.
+Third syntax is used to copy multiple Sources(files) to Directory.
+
+
+## head
+
+- The head command, as the name implies, print the top N number of data of the given input. By default, it prints the first 10 lines of the specified files. 
+- If more than one file name is provided then data from each file is preceded by its file name.  
+- **SYNTAX**: `head [OPTION]... [FILE]...`
+
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/9.PNG)
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/10.PNG)
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/11.PNG)
+
+## tail
+
+- It is the complementary of head command.The tail command, as the name implies, print the last N number of data of the given input. By default it prints the last 10 lines of the specified files. 
+- If more than one file name is provided then data from each file is precedes by its file name.
+- **SYNTAX**: `tail [OPTION]... [FILE]...`
+
 
 13. date
 
