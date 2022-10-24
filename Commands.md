@@ -4,10 +4,10 @@
 ## echo 
 
 - echo command in linux is used to display line of text/string that are passed as an argument .
-
 - **SYNTAX**: `echo [option] [string]`
-
 - E.g `echo -e "Geeks \bfor \bGeeks"` (it removes all the spaces in between the text)
+- **The echo command adds an extra character at the end of a string which is a new newline character *\n*.**
+- Disable this behavior with the **-n** switch to `echo`. E.g `echo -n "Hello Linux"`.
 
 ## touch
 
@@ -31,8 +31,12 @@
 
 ## man 
 
-- display manual for that command. *(Use mouse to scroll or press space button or down arrow key.
-press '/' and search for a word hit enter to get the result. 'shift+g' end of the file, 'g' start of the file.)*
+- display manual for that command.
+- **Enter key**: to scroll down line by line.
+- **Space bar**: To go to the next page.
+- **press b key**: To go to back one page.
+- Use the mouse scroll wheel, the up and down arrow keys, or the PgDn and PgUp keys to navigate through it.
+- Use /{word}+enter to find a particular word
 
 ![](https://github.com/codophilic/LearnLinux/blob/main/Commands/2.PNG)
 
@@ -42,7 +46,7 @@ press '/' and search for a word hit enter to get the result. 'shift+g' end of th
 - By default, ls lists just one directory. If you name one or more directories on the command line, ls will list each one of those directories.
 - The -R (uppercase R) option lists all subdirectories, recursively. That shows you the whole directory tree starting at the current directory
 - **SYNTAX**: `ls [option]`
-- [ls](https://www.javatpoint.com/linux-ls)
+- [learn more about ls](https://www.javatpoint.com/linux-ls)
 
 ![](https://github.com/codophilic/LearnLinux/blob/main/Commands/3.PNG)
 ![](https://github.com/codophilic/LearnLinux/blob/main/Commands/5.PNG)
@@ -116,7 +120,7 @@ Third syntax is used to copy multiple Sources(files) to Directory.
 
 ![](https://github.com/codophilic/LearnLinux/blob/main/Commands/9.PNG)
 ![](https://github.com/codophilic/LearnLinux/blob/main/Commands/10.PNG)
-![](https://github.com/codophilic/LearnLinux/blob/main/Commands/11.PNG)
+
 
 ## tail
 
@@ -124,116 +128,215 @@ Third syntax is used to copy multiple Sources(files) to Directory.
 - If more than one file name is provided then data from each file is precedes by its file name.
 - **SYNTAX**: `tail [OPTION]... [FILE]...`
 
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/11.PNG)
 
-13. date
 
-14. cat -> concatenates files and print the standard output.
-concatenates multiple files.
-(14,15)
+## date
 
-15. less -> less command shows the content stored inside a file.
+- date command is used to display the system date and time. date command is also used to set date and time of the system. 
+- By default the date command displays the date in the time zone on which unix/linux operating system is configured.You must be the super-user (root) to change the date and time.
+- **SYNTAX**: `date [OPTION]... [+FORMAT]`
+- [learn more about date](https://www.geeksforgeeks.org/date-command-linux-examples/)
 
-when there are 1000 lines of code and when we type cat is shows all the lines, in less we can see inital lines fitted in terminal and using space we scroll down or move down just like man.
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/12.PNG)
 
-less filename
+## cat 
 
-16. wc -> word count. It counts the word and some inputs. (16,17,18)
+- Cat(concatenate) command is very frequently used in Linux. It reads data from the file and gives their content as output. It helps us to create, view, concatenate files. So let us see some frequently used cat commands. 
 
-1-> line, 2-> words , 12-> number of bytes.
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/13.PNG)
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/14.PNG)
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/15.PNG)
 
-The echo command is slipping in an extra character at the end of your string, test, a new newline character, \n.
+## less 
 
-So in effect you're counting this: test\n. You can disable this behavior with the -n switch to echo.
+- Less command is a Linux utility that can be used to read the contents of a text file one page(one screen) at a time. It has faster access because if file is large it doesn’t access the complete file, but accesses it page by page.
+- **SYNTAX**: `less file_name`
+- [Learn more about less](https://www.geeksforgeeks.org/less-command-linux-examples/)
 
-17.| -> piping  passing one command output to the another command.
-(19)
+## wc 
 
-18. sort -> its case sensitive 'A' < 'a'. use -f to ignore case . (20,21,22,23,24)
+- WC stands for word count. As the name implies, it is mainly used for counting purpose.
+-It is used to find out number of lines, word count, byte and characters count in the files specified in the file arguments.
+-By default it displays four-columnar output.
+-First column shows number of lines present in a file specified, second column shows number of words present in the file, third column shows number of characters present in file and fourth column itself is the file name which are given as argument.
 
-Sorting incase of numeric numbers are different is sort based on digits. for numerical sorting use -n. -r to reverse sort. -u for ignoring the sort with duplicates items , prints sort with unique items.
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/16.PNG)
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/17.PNG)
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/18.PNG)
 
-19. uniq -> it reports or omits the repeating lines. (26,25,27,28)
+*(The echo command adds an extra character at the end of a string which is a new newline character \n.Disable this behavior with the **-n** switch to `echo`. E.g `echo -n "Hello Linux"`.)*
 
-uniq removes first occurences like but if the same value is present in another line one time it won't be removed. So use sort and uniq both.
+## pipe(|) 
 
-SO before using uniq sort everything and then use.
--c count occurences,-d shows duplicate items. -u shows unique items.
+- Pipe is used to combine two or more commands, and in this, the output of one command acts as input to another command, and this command’s output may act as input to the next command and so on.
+- **Pipes are unidirectional i.e data flows from left to right through the pipeline**
+- **SYNTAX**: `command_1 | command_2 | command_3 | .... | command_N`
 
-20. expansion -> matching patterns using * & ?
-?-> matches single character 
-*-> matches whole character. (29)
-{} (30)
-shell first expands the thing then executes the command.
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/19.PNG)
 
-21. diff -> compare 2 files and get the differences. (31)
 
-'<' changes not present, '>'changes present.
+## sort 
 
-22. find -> THe find command can be used to find files or folders matching a particular search pattern. It searches recursively. We can use pattern matching for files. '.' means search in current folder
-(32,33,34,35)
-TO search folder use d. -i to ignore case sensitivity  
+- SORT command is used to sort a file, arranging the records in a particular order. By default, the sort command sorts file assuming the contents are ASCII. *('A' < 'a', use **-f** to ignore case )*
+- Using options in the sort command can also be used to sort numerically. 
+- Incase of numeric numbers sorting is done based on digits. For numerical sorting use **-n**. 
+- Use **-r** to reverse sort. Use **-u** for printing unique items.
 
-find -type f -size +100k -> list all files which has more than 100kb size.
-find -type f -mtime +3 -> list files which were edited more than 3 days ago.
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/20.PNG)
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/21.PNG)
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/22.PNG)
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/23.PNG)
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/24.PNG)
 
-While finding the files or directories we can execute the command for each of them.
-In the example find all the files while executing command cat to print all the files.
-{} -> placeholder, \; -> terminating the executing command. (36)
+## uniq 
 
-23. grep -> Global regular expression print. it is use to search in files,logs, or combine it with pipes to filter output of another command.
+- uniq is the tool that helps to detect the adjacent duplicate lines and also deletes the duplicate lines. uniq filters out the adjacent matching lines from the input file (that is required as an argument) and writes the filtered data to the output file. 
+- Use **uniq** and **sort** to remove duplocate items.
+- Use **-c** to get count occurences,**-d** shows duplicate items & **-u** shows unique items.
 
-grep [options] pattern [files]
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/26.PNG)
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/25.PNG)
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/27.PNG)
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/28.PNG)
 
-https://www.geeksforgeeks.org/grep-command-in-unixlinux/
 
-24. du -> disk usage. Gives the size of directories. (37,38)du -h gives human readable format.
+## Wildcards 
 
-25. df -> disk free provides information about file system shows disk utilization with space left and allocated etc. (39)
+- Wildcards are also often referred to as glob patterns (or when using them, as "globbing").
+- [Learn more about it here](https://www.linuxjournal.com/content/pattern-matching-bash)
 
-26. history -> list all the commands ran in the past. TO run a past command we can use its ID number.
-!(number) (40)
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/29.PNG)
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/30.PNG)
 
-27. ps -> process status. (41,42)
-ps ax shows process initiated by any users on the system.
+- Shell first expands the thing {} then executes the command.
 
-28. top-> The top (table of processes) command shows a real-time view of running processes in Linux and displays kernel-managed tasks. The command also provides a system information summary that shows resource utilization, including CPU and memory usage.
+## diff 
 
-https://phoenixnap.com/kb/top-command-in-linux#:~:text=The%20top%20(table%20of%20processes,including%20CPU%20and%20memory%20usage.
+- diff stands for difference. This command is used to display the differences in the files by comparing the files line by line. 
+- The important thing to remember is that diff uses certain special symbols and instructions that are required to make two files identical. It tells you the instructions on how to change the first file to make it match the second file. 
+- Special symbols are: 
+a : add
+c : change
+d : delete
+- **SYNTAX**: `diff [options] File1 File2 `
+- [Learn more about diff](https://www.geeksforgeeks.org/diff-command-linux-examples/)
 
-29. kill -> linux process receiev signals and react to them. The kill program can send a variety of signals.
-kill <PID>
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/31.PNG)
 
-30. alias -> In Linux, an alias is a shortcut that references a command. An alias replaces a string that invokes a command in the Linux shell with another user-defined string. Aliases are mostly used to replace long commands, improving efficiency and avoiding potential spelling errors. (43,44)
-It is not permanent , if will kill the terminal its no longer supported.
 
-now to make it permanent we need to place it in a file depending on the shell like for bash we will add the alias in .basharc file.
+## find 
 
-31. xargs -> xargs command is used to convert input from standard input into arguments to a command. Through xargs the output of a command is used as the input of another command.
+- It can be used to find files and directories and perform subsequent operations on them. It supports searching by file, wildcards, folder, name, creation date, modification date, owner and permissions. 
+- **SYNTAX**: `find [where to start searching from]
+ [expression determines what to find] [-options] [what to find]`
 
-command1 | xargs command2
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/32.PNG)
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/33.PNG)
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/34.PNG)
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/35.PNG)
 
-Xargs is a great command that reads streams of data from standard input, then generates and executes command lines; meaning it can take output of a command and passes it as argument of another command. If no command is specified, xargs executes echo by default. You many also instruct it to read data from a file instead of stdin.
+- Search folder use **d**. Use **-i** to ignore case sensitivity  
 
-let say there are multiple files in a folder and some files needs to be deleted. Those deletion of file name is present in a deletefile.txt file. So to pass the content of deletefile.txt as an argument to remove command.
-We cannot use cat deletefile.txt | rm -> since it shows one single content to remove command.
-So we need to split into arguments of deadfile and pass those arguments to the remove command. (45)
+- E.g `find -type f -size +100k` (list all files which has more than 100kb size).
+`find -type f -mtime +3` (list files which were edited more than 3 days ago).
 
-Using xargs & | it converts the output of one command into arguments and pass it to another command.(46)
+- While finding the files or directories we can execute the command for each of them.
+- In the example find all the files while executing command cat to print all the files.
+**{} -> placeholder, \; -> terminating the executing command**. 
 
-32. ln -> It is used to create links. Its like a pointer to another file just like windows shortcuts.
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/36.PNG)
 
-There are two types of hard links and soft links.
+## grep 
 
-Hard links -> You can't link directories and cannot link external filesystem (disk)
+- Global regular expression print. it is use to search in files,logs, or combine it with pipes to filter output of another command.
+- **SYNTAX**: grep [options] pattern [files]
+- [Learn more about grep](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
+
+## du 
+
+- du command, short for disk usage, is used to estimate file space usage.
+- The du command can be used to track the files and directories which are consuming excessive amount of space on hard disk drive. 
+- **SYNTAX**: `du [OPTION]... [FILE]...`
+- `du -h` gives human readable format.
+
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/37.PNG)
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/38.PNG)
+
+## df 
+
+- disk free provides information about file system shows disk utilization with space left and allocated etc.
+
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/39.PNG)
+
+## history 
+
+- list all the commands ran in the past. To run a past command we can use its ID number and run it by `!(number)`.
+
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/40.PNG)
+
+## ps 
+
+- process status. 
+- `ps ax` shows process initiated by any users on the system.
+
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/41.PNG)
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/42.PNG)
+
+## top
+
+- The top (table of processes) command shows a real-time view of running processes in Linux and displays kernel-managed tasks. The command also provides a system information summary that shows resource utilization, including CPU and memory usage.
+- [Seehere](https://phoenixnap.com/kb/top-command-in-linux#:~:text=The%20top%20(table%20of%20processes,including%20CPU%20and%20memory%20usage)
+
+## kill 
+
+- linux process receive signals and react to them. The kill program can send a variety of signals.
+- **SYNTAX**: `kill <PID>`
+
+## alias 
+
+- In Linux, an alias is a shortcut that references a command. An alias replaces a string that invokes a command in the Linux shell with another user-defined string. Aliases are mostly used to replace long commands, improving efficiency and avoiding potential spelling errors. 
+
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/43.PNG)
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/44.PNG)
+
+- It is not permanent , if will kill the terminal its no longer supported.
+
+- Now to make it permanent we need to place it in a file depending on the shell like for bash we will add the alias in .basharc file.
+
+## xargs 
+
+- xargs command is used to convert input from standard input into arguments to a command. Through xargs the output of a command is used as the input of another command.
+- **SYNTAX**: `command1 | xargs command2`
+- Xargs is a great command that reads streams of data from standard input, then generates and executes command lines; meaning it can take output of a command and passes it as argument of another command. If no command is specified, xargs executes echo by default. You many also instruct it to read data from a file instead of stdin.
+- let say there are multiple files in a folder and some files needs to be deleted. Those deletion of file name is present in a **deletefile.txt** file. So to pass the content of **deletefile.txt** as an argument to remove command.
+We cannot use `cat deletefile.txt | rm` *(since it shows one single content to remove command)*.
+- So we need to split into arguments of deadfile and pass those arguments to the remove command. 
+
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/45.PNG)
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/46.PNG)
+
+- Using **xargs** & **pipe(|)** it converts the output of one command into arguments and pass it to another command.
+
+## ln 
+
+- It is used to create links. Its like a pointer to another file just like windows shortcuts.
+- There are two types of **hard links** and **soft links**.
+1. Hard links: You can't link directories and cannot link external filesystem (disk)
 let say if we want two files to be sync not copy its pointing to the same file. we can use hard links.
 
-ln original newlink (47)
+**SYNTAX**: `ln original newlink` 
 
-if we delete any one of the file the other file persists.
-https://www.geeksforgeeks.org/soft-hard-links-unixlinux/
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/47.PNG)
 
-soft links-> are same as hard links but when original file is deleted the another file linked also gets deleted.
+- if we delete any one of the file the other file persists. [Check here](https://www.geeksforgeeks.org/soft-hard-links-unixlinux/)
 
-33. who -> displays the users logged in the system. when a server is used by multiple people we can see which user logged in at what time.
+2. soft links: are same as hard links but when original file is deleted the another file linked also gets deleted.
 
-34. passwd -> One can changed the password of the linux system.
+## who 
+
+- Displays the users logged in the system. when a server is used by multiple people we can see which user logged in at what time.
+
+## passwd 
+
+- One can changed the password of the linux system.
