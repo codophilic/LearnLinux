@@ -48,9 +48,11 @@
 ## Users in Linux
 
 https://mediatemple.net/community/products/dv/204643890/an-introduction-to-the-root-user
+
 https://www.beyondtrust.com/blog/entry/unix-linux-privileged-management-should-you-sudo#:~:text=Sudo%20stands%20for%20either%20%22substitute,su%E2%80%9D%20which%20is%20not%20temporary
 
 ## File permission
 
 https://www.javatpoint.com/linux-file-permissions
+
 https://www.section.io/engineering-education/user-groups-and-permissions-linux/
