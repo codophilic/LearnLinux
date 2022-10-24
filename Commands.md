@@ -1,17 +1,38 @@
+# Basic Linux Commands
 (man man, less filename,find exec->>..pc)
 
-1. whoami
--> display the user name of the system.(1)
+## echo 
 
-1.0 -> echo 
+- echo command in linux is used to display line of text/string that are passed as an argument .
 
-1.1 >,>> (appends) -> redirect the output into some file .(13) Usually used with echo command.
+- **SYNTAX**: `echo [option] [string]`
 
-2. man <command>
--> display manual for that command (2). Use mouse to scroll or press space button or down arrow key.
-press / and search for a word hit enter to get the result. 'shift +g' end of the file, g start of the file.
+- E.g `echo -e "Geeks \bfor \bGeeks"` (it removes all the spaces in between the text)
 
-3. ls command with some options ad arguments. ls=list
+## whoami
+
+- It displays the username of the current user when this command is invoked.
+
+- **SYNTAX**: `whoami [option]`
+
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/1.PNG)
+
+## >> Operator
+
+- '>' operator overrides the current content of a file with the output.
+- '>>' appends redirect the output into the file along with the original content .
+
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/13.PNG)
+
+## man 
+
+-> display manual for that command. *(Use mouse to scroll or press space button or down arrow key.
+press '/' and search for a word hit enter to get the result. 'shift+g' end of the file, 'g' start of the file.)*
+
+![](https://github.com/codophilic/LearnLinux/blob/main/Commands/2.PNG)
+
+## ls 
+
 By default, ls lists just one directory. If you name one or more directories on the command line, ls will list each one. The -R (uppercase R) option lists all subdirectories, recursively. That shows you the whole directory tree starting at the current directory
 (3)(5)
 
